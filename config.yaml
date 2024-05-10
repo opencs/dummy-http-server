@@ -1,0 +1,21 @@
+# Binding address and port
+address: "localhost:8080"
+# Location of the captured resources. This directory must exist and the user
+# that is running the applicaiton must have write access to it.
+captureDir: "var"
+# Custom responses. See README.md for more information.
+responses:
+  - pathPattern: ^\/abcdef$
+    methods:
+      - GET
+      - POST
+    contentType: text/plain
+    body: aGVsbG8K
+    returnCode: 404
+  - pathPattern: ^\/nocap$
+    methods:
+      - GET
+      - POST
+    contentType: text/plain
+    body: aGVsbG8K
+    skipCapture: true

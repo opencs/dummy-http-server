@@ -1,0 +1,3 @@
+#
+address: "localhost:8080"
+captureDir: "capture2"

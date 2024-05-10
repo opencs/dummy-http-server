@@ -1,0 +1,18 @@
+#
+address: "localhost2:8080"
+captureDir: "capture2"
+readTimeout: 123
+writeTimeout: 456
+maxRequestSize: 789
+responses:
+  - pathPattern: \/b.*
+    methods:
+      - GET
+      - POST
+    contentType: text/plain
+    body: AAAA
+    skipCapture: true
+    returnCode: 201
+  - pathPattern: "\\/a.*"
+    contentType: "text/html"
+    body: BBBB
